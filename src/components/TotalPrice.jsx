@@ -39,52 +39,6 @@ function TotalPrice() {
   };
   return (
     <>
-      {/* <div className="container">
-        <input type="number" value={count} onChange={handleChange} />
-        <div>
-          <h3>Number of items : {count}</h3>
-          <h3>Price Per Piece : {pricePerPiece}</h3>
-          <h3>Total Amount : {total}</h3>
-          <h3>Gst Amount : {gst}</h3>
-          <h3>Final Total Amount : {finalTotalAmount}</h3>
-        </div>
-        <div>
-          <button
-            type="button"
-            className="btn btn-outline-primary me-3"
-            onClick={addCount}
-          >
-            AddItem
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-secondary me-3"
-            onClick={subCount}
-          >
-            SubItem
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-success me-3"
-            onClick={totalAmount}
-          >
-            Total Amount
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-danger me-3"
-            onClick={afterGst}
-          >
-            GSt
-          </button>
-          <button type="button" 
-          className="btn btn-outline-warning"
-          onClick={finalAmount}
-          >
-            Final Amount
-          </button>
-        </div>
-      </div> */}
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-md-6">

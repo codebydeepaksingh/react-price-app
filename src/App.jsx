@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="container text-center text-danger">
-        <h1>Price App</h1>
+        
 
         {/* <Price /> */}
         <TotalPrice />

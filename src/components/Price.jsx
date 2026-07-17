@@ -21,32 +21,71 @@ function Price() {
   };
 
   const subTotal = count * pricePerPiece;
-  const gst = (subTotal*gstRate/100)
-  const totalAmount = subTotal * gst;
+  const gst = (subTotal * gstRate) / 100;
+  const totalAmount = subTotal + gst;
 
-//   const finalPrice = count *250
   return (
     <>
-      <div className="container">
-        <input type="number" value={count} onChange={handleChange} />
-        <h2>Number of items : {count}</h2>
-        <h2>Price per Pice : {pricePerPiece}</h2>
-        <h2>Subtotal : ₹{subTotal}</h2>
-        <h2> Gst : {gst}</h2>
-        <h2>Amount after Gst : {totalAmount}</h2>
-        <div className="column">
-          <button type="button" className="btn btn-danger" onClick={subCount}>
-            -
-          </button>
-          <button type="button" className="btn btn-success" onClick={addCount}>
-            +
-          </button>
-
-          {/* <button type="button" className="btn btn-primary" fixed="true">
-            Fixed
-          </button> */}
-          {/* <button className="btn btn-danger" onClick={totalAmount}>TotalMount</button> */}
-
+      <div className="container mt-5">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <div class="card bg-primary-subtle">
+              <div class="card-body">
+                <h2 class="card-title text-white bg-info p-2 rounded">Price App</h2>
+                <div className="mb-4 mt-4">
+                  <label className="text-white pb-2 fs-2 ">Number of items</label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    value={count}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <th>Number of items : </th>
+                        <td>{count}</td>
+                      </tr>
+                      <tr>
+                        <th>Price per Pice : </th>
+                        <td>{pricePerPiece}</td>
+                      </tr>
+                      <tr>
+                        <th>Subtotal : </th>
+                        <td>₹{subTotal}</td>
+                      </tr>
+                      <tr>
+                        <th>Gst : </th>
+                        <td>{gst}</td>
+                      </tr>
+                      <tr>
+                        <th>Amount after Gst : </th>
+                        <td>{totalAmount}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                  <button
+                    className="btn btn-primary"
+                    type="button"
+                    onClick={addCount}
+                  >
+                    AddCount
+                  </button>
+                  <button
+                    className="btn btn-success"
+                    type="button"
+                    onClick={subCount}
+                  >
+                    SubCount
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
